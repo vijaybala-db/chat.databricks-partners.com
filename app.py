@@ -1,12 +1,16 @@
 import chainlit as cl
+from dotenv import load_dotenv
+load_dotenv()
+from langchain_community.chat_models.databricks import ChatDatabricks
 
+chat = ChatDatabricks(endpoint='databricks-dbrx-instruct')
 
 @cl.on_message
 async def main(message: cl.Message):
-    # Your custom logic goes here...
+    response = chat.invoke(message.content)
 
     # Send a response back to the user
     await cl.Message(
-        content=f"Received: {message.content}",
+        content=f"Response: {response.content}",
     ).send()
 
