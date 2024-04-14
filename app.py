@@ -2,6 +2,8 @@ import chainlit as cl
 from dotenv import load_dotenv
 load_dotenv()
 from langchain_community.chat_models.databricks import ChatDatabricks
+from langchain.memory import ConversationBufferMemory
+memory = ConversationBufferMemory()
 
 chat = ChatDatabricks(endpoint='databricks-dbrx-instruct')
 
