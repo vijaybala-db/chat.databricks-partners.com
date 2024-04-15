@@ -1,3 +1,7 @@
 .watermark {
 	display:none;
 }
+
+body {
+	background-color: blue;
+}
