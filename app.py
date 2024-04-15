@@ -16,7 +16,9 @@ chain = llm | StrOutputParser()
 
 @cl.on_chat_start
 async def start():
-    await cl.Message(content='Welcome to the Databricks booth at Slalom Innovation Day!').send()
+    await cl.Message(content='Welcome to the Databricks booth at Slalom Innovation Day!\n\n'+
+                     'Ask me anything. Eg. "Write an essay about DBRX" OR \n'+
+                     '"Analyze the pros and cons of using Artificial Intelligence in healthcare"').send()
 
 @cl.on_message
 async def main(message: cl.Message):
