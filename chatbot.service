@@ -1,0 +1,14 @@
+[Unit]
+Description=Chatbot Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/github/chat.databricks-partners.com
+ExecStart=/home/ubuntu/github/chat.databricks-partners.com/venv/bin/python -m chainlit run -w app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
