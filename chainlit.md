@@ -1,6 +1,6 @@
 # DBRX-Bot
 
-Welcome to the Iguazio Webinar: **Improving LLM Accuracy and Performance**
+Welcome to the **Accenture - Databricks Monthly Global Practice Meet**
 
 Ask me anything. For example:
 - Write an essay about DBRX
